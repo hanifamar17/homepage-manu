@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+:root {
+  --font-display: 'Source Serif 4', ui-serif, Georgia, serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-paper: #faf8f5;
+  --color-ink: #1f1c19;
+  --color-ink-soft: #6b6459;
+  --color-ink-faint: #a49b8c;
+  --color-line: #e6e0d6;
+  --color-accent: #a8501f;
+  --color-accent-soft: #f3e6dc;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  overflow-x: clip;
+}
+
+h1, h2, .display { font-family: var(--font-display); font-style: normal; }
+.mono { font-family: var(--font-mono); }
+
+.eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--color-ink-faint);
+}
+.eyebrow.accent { color: var(--color-accent); }
+
+.idx-list { border-top: 1px solid var(--color-line); }
+.idx-row {
+  display: flex; align-items: flex-start; gap: 16px; padding: 20px 2px;
+  border-bottom: 1px solid var(--color-line);
+  text-decoration: none; color: inherit; cursor: pointer;
+  transition: padding-left .15s ease-out, background-color .15s ease-out;
+}
+.idx-row:hover { padding-left: 6px; background: rgba(31,28,25,0.03); }
+.idx-row:hover .idx-num, .idx-row:hover h3, .idx-row:hover .idx-arrow { color: var(--color-accent); }
+.idx-num {
+  font-family: var(--font-mono); font-size: 13px; font-weight: 700;
+  color: var(--color-ink-faint); width: 22px; flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+.idx-arrow { font-size: 20px; color: var(--color-ink-faint); flex-shrink: 0; transition: transform .15s ease-out, color .15s ease-out; }
+.idx-row:hover .idx-arrow { transform: translateX(3px); }
+
+.btn-solid {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+  padding: 12px 20px; min-height: 44px;
+  background: var(--color-ink); color: var(--color-paper);
+  transition: background-color .15s ease-out;
+}
+.btn-solid:hover { background: var(--color-accent); }

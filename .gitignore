@@ -1,0 +1,15 @@
+# Database & Config Sensitif
+includes/db.php
+
+# Node Dependencies
+node_modules/
+
+# User Uploads
+/uploads/*
+!/uploads/.htaccess
+!/uploads/.gitkeep
+
+# Logs & System Files
+*.log
+.DS_Store
+Thumbs.db
